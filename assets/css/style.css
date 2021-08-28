@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    font-weight: normal;
+    font-family: 'Poppins',sans-serif;
+    padding: 20px;
+    background-color: #999;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+.cards{
+    --spacing: 30px;
+    --column: 4;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--spacing));
+}
+@media screen and (max-width: 1023px) {
+    .cards{
+        --column: 2;
+    }
+}
+@media screen and (max-width: 767px) {
+    .cards{
+        --spacing:15px;
+        --column: 1;
+    }
+}
+
+
+.card{
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: calc(calc(100% / var(--column)) - var(--spacing));
+    margin-left: var(--spacing);
+    margin-bottom: var(--spacing);
+}
+.card__image{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.card-top{
+    padding: 25px;
+}
+.card__title{
+    font-weight: 500;
+    margin-bottom: 25px;
+    word-break: break-all;
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+.card__user{
+    display: flex;
+    align-items: center;
+}
+.card__user-avt{
+    width: 40px;
+    height: 40px;
+    border-radius: 100rem;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.card__info{
+    padding-left: 20px;
+    flex: 1;
+}
+.card__info-top{
+    display: flex;
+    align-items: center;
+}
+.card__info-name{
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.card__info-check{
+    color: #20E3B2;
+    margin-left: 5px;
+    font-size: 1.4rem;
+}
+.card__info-bottom{
+    color: #999;
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+.card__bottom{
+    padding: 25px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card__live{
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: #FF6651;;
+}
+.card__live span{
+    margin-left: 5px;
+    font-size: 1.4rem;
+}
+.card__watching{
+    display: flex;
+    align-items: center;
+}
+.card__watching-circle{
+    width: 8px;
+    height: 8px;
+    border-radius: 100rem;
+    background-color: #20E3B2;
+    margin-right: 5px;
+}
+.card__watching span{
+    color: #999;
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+.card__content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.card-top{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.card__user,
+.card__bottom{
+    margin-top: auto;
+    flex-shrink: 0;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+}
+
